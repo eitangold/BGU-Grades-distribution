@@ -3,7 +3,7 @@ import random
 import link_generator
 import webbrowser
 import time
-# Function to generate random fields
+# Function to OPEN LINKS in the browser fields
 def generate_fields(input_token:tk.Entry,input_department:tk.Entry,input_course:tk.Entry):
    token = input_token.get()
    course = input_course.get()
@@ -12,7 +12,6 @@ def generate_fields(input_token:tk.Entry,input_department:tk.Entry,input_course:
       webbrowser.open(url=link)
       time.sleep(1)
     
-   #  output_label.config(text="Generated Fields: " + ', '.join(map(str, generated_fields)))
 def main():
    # Create the main application window
    app = tk.Tk()
@@ -41,9 +40,7 @@ def main():
    generate_button = tk.Button(app, text="Generate Links", command=lambda : generate_fields(input_token,input_department,input_course))
    generate_button.pack()
 
-   # Create a label to display the generated fields
-   output_label = tk.Label(app, text="Generated Fields: ")
-   output_label.pack()
+
 
    # Start the Tkinter main loop
    app.mainloop()
